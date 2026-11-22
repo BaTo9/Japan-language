@@ -306,6 +306,81 @@ listening_title: '🎧 Сонсголын дасгал',
         pdf_level_n2: '📙 N2 түвшин',
         pdf_level_n1: '📕 N1 түвшин',
         btn_download: '📥 Татах', 
+        menu_login: 'Нэвтрэх',
+        menu_logout: 'Гарах',
+        login_title: '🔐 Нэвтрэх',
+        login_subtitle: 'Бүртгэлдээ нэвтрэх эсвэл шинээр бүртгүүлэх',
+        login_signin_title: 'Нэвтрэх',
+        login_register_title: 'Бүртгүүлэх',
+        login_name: 'Нэр',
+        login_email: 'Имэйл',
+        login_password: 'Нууц үг',
+        login_err_empty: 'Бүх талбарыг бөглөнө үү.',
+        login_err_email: 'Имэйл хаяг буруу байна.',
+        login_err_exists: 'Энэ имэйлээр бүртгэл аль хэдийн байна. Нэвтрэнэ үү.',
+        login_err_notfound: 'Ийм бүртгэл олдсонгүй. Эхлээд бүртгүүлнэ үү.',
+        login_err_wrongpass: 'Нууц үг буруу байна.',
+        login_success_register: 'Бүртгэл амжилттай! Тавтай морил.',
+        login_success_signin: 'Амжилттай нэвтэрлээ!',
+        settings_account: 'Бүртгэл',
+        settings_not_signed: 'Нэвтрээгүй байна',
+
+        // ===== Нэмэлт түлхүүрүүд (шинэ хуудсууд) =====
+        katakana_title: '📖 Катакана үсгүүд',
+        katakana_desc: 'Япон хэлний үндсэн 46 үсгийн хүснэгт — 5 багана, 10 мөр',
+        yoon_title: ' Ёон (хосолсон дуудлага)',
+        yoon_desc: 'Жижиг や・ゆ・よ-той хосолсон дуудлагууд',
+        kanji_on_label: '📖 Он дуудлага (音読み)',
+        kanji_kun_label: '📖 Күн дуудлага (訓読み)',
+        kanji_meaning_label: '🇲🇳 Орчуулга',
+        kanji_desc_label: '📝 Тайлбар',
+        kanji_example_label: '📝 Жишээ',
+        kanji_translation_label: '🇲🇳 Жишээний орчуулга',
+        favorites_add: 'Дуртай руу нэмэх',
+        favorites_title: '❤️ Дуртай зүйлс',
+        favorites_subtitle: 'Хадгалсан ханз болон үгсийн жагсаалт',
+        favorites_empty_title: 'Дуртай зүйл алга',
+        favorites_empty_desc: 'Ханз эсвэл үгэн дээрх зүрхний товчийг дарж дуртай жагсаалтандаа нэмээрэй.',
+        fav_type_kanji: 'Ханз',
+        fav_type_word: 'Үг',
+        vocab_search_placeholder: 'Үг хайх...',
+        vocab_table_romaji: 'Галиг',
+        vocab_no_results: 'Хайлтад тохирох үг олдсонгүй',
+        listening_reveal: 'Орчуулгыг харах',
+        quiz_question: 'Асуулт',
+        quiz_score_label: 'Оноо',
+        quiz_correct: '✅ Зөв!',
+        quiz_wrong: '❌ Буруу',
+        quiz_result_title: 'Үр дүн',
+        progress_title: '📊 Миний ахиц',
+        progress_subtitle: 'Сурсан зүйлсийн статистик',
+        progress_favorites: 'Дуртай зүйлс',
+        progress_quiz_best: 'Шалгалтын шилдэг оноо',
+        progress_quiz_attempts: 'Шалгалт өгсөн тоо',
+        progress_quiz_last: 'Сүүлийн шалгалтын оноо',
+        progress_theme: 'Сэдэв',
+        progress_language: 'Хэл',
+        progress_details: 'Дэлгэрэнгүй',
+        theme_light: 'Гэрэл',
+        theme_dark: 'Харанхуй',
+        settings_title: '⚙️ Тохиргоо',
+        settings_subtitle: 'Аппын тохиргоог өөрчлөх',
+        settings_language: 'Хэл',
+        settings_language_desc: 'Интерфэйсийн хэлийг сонгох',
+        settings_theme: 'Сэдэв',
+        settings_theme_desc: 'Гэрэл эсвэл харанхуй горим',
+        settings_clear: 'Хадгалсан өгөгдлийг устгах',
+        settings_clear_desc: 'Дуртай зүйлс болон шалгалтын түүх арилна',
+        settings_clear_confirm: 'Бүх хадгалсан өгөгдлийг устгах уу?',
+        settings_cleared: 'Өгөгдөл устгагдлаа.',
+        pdf_view: 'Харах',
+        pdf_coming_soon: 'Удахгүй',
+        pdf_hiragana_chart: 'Хирагана хүснэгт',
+        pdf_katakana_chart: 'Катакана хүснэгт',
+        pdf_kanji_chart: 'Ханзны жагсаалт (N5)',
+        pdf_vocab_material: 'Үгсийн сангийн материал (N5)',
+        pdf_grammar_material: 'Дүрмийн материал (N5)',
+
   },
     
     
@@ -496,6 +571,81 @@ grammar_level_n1: '📕 N1 Level',
     pdf_level_n2: '📙 N2 Level',
     pdf_level_n1: '📕 N1 Level',
     btn_download: '📥 Download',
+        menu_login: 'Log in',
+        menu_logout: 'Log out',
+        login_title: '🔐 Log in',
+        login_subtitle: 'Sign in to your account or create a new one',
+        login_signin_title: 'Sign in',
+        login_register_title: 'Register',
+        login_name: 'Name',
+        login_email: 'Email',
+        login_password: 'Password',
+        login_err_empty: 'Please fill in all fields.',
+        login_err_email: 'Invalid email address.',
+        login_err_exists: 'An account with this email already exists. Please sign in.',
+        login_err_notfound: 'Account not found. Please register first.',
+        login_err_wrongpass: 'Incorrect password.',
+        login_success_register: 'Registration successful! Welcome.',
+        login_success_signin: 'Signed in successfully!',
+        settings_account: 'Account',
+        settings_not_signed: 'Not signed in',
+
+        // ===== Extra keys (new pages) =====
+        katakana_title: '📖 Katakana Characters',
+        katakana_desc: 'Basic 46 characters of Japanese — 5 columns, 10 rows',
+        yoon_title: ' Yoon (combined sounds)',
+        yoon_desc: 'Combinations with small ya, yu, yo',
+        kanji_on_label: '📖 On reading (音読み)',
+        kanji_kun_label: '📖 Kun reading (訓読み)',
+        kanji_meaning_label: '🇲🇳 Meaning',
+        kanji_desc_label: '📝 Description',
+        kanji_example_label: '📝 Example',
+        kanji_translation_label: '🇲🇳 Example translation',
+        favorites_add: 'Add to favorites',
+        favorites_title: '❤️ Favorites',
+        favorites_subtitle: 'Your saved kanji and words',
+        favorites_empty_title: 'No favorites yet',
+        favorites_empty_desc: 'Tap the heart button on a kanji or word to add it to your favorites.',
+        fav_type_kanji: 'Kanji',
+        fav_type_word: 'Word',
+        vocab_search_placeholder: 'Search words...',
+        vocab_table_romaji: 'Romaji',
+        vocab_no_results: 'No words match your search',
+        listening_reveal: 'Show translation',
+        quiz_question: 'Question',
+        quiz_score_label: 'Score',
+        quiz_correct: '✅ Correct!',
+        quiz_wrong: '❌ Wrong',
+        quiz_result_title: 'Result',
+        progress_title: '📊 My Progress',
+        progress_subtitle: 'Statistics of what you have learned',
+        progress_favorites: 'Favorites',
+        progress_quiz_best: 'Best quiz score',
+        progress_quiz_attempts: 'Quiz attempts',
+        progress_quiz_last: 'Last quiz score',
+        progress_theme: 'Theme',
+        progress_language: 'Language',
+        progress_details: 'Details',
+        theme_light: 'Light',
+        theme_dark: 'Dark',
+        settings_title: '⚙️ Settings',
+        settings_subtitle: 'Change app preferences',
+        settings_language: 'Language',
+        settings_language_desc: 'Choose the interface language',
+        settings_theme: 'Theme',
+        settings_theme_desc: 'Light or dark mode',
+        settings_clear: 'Clear saved data',
+        settings_clear_desc: 'Favorites and quiz history will be removed',
+        settings_clear_confirm: 'Delete all saved data?',
+        settings_cleared: 'Data cleared.',
+        pdf_view: 'View',
+        pdf_coming_soon: 'Coming soon',
+        pdf_hiragana_chart: 'Hiragana chart',
+        pdf_katakana_chart: 'Katakana chart',
+        pdf_kanji_chart: 'Kanji list (N5)',
+        pdf_vocab_material: 'Vocabulary material (N5)',
+        pdf_grammar_material: 'Grammar material (N5)',
+
     },
     
     // ===== JP (Япон) =====
@@ -679,6 +829,81 @@ grammar_level_n1: '📕 N1レベル',
     pdf_level_n2: '📙 N2レベル',
     pdf_level_n1: '📕 N1レベル',
     btn_download: '📥 ダウンロード',
+        menu_login: 'ログイン',
+        menu_logout: 'ログアウト',
+        login_title: '🔐 ログイン',
+        login_subtitle: 'アカウントにログイン、または新規登録',
+        login_signin_title: 'ログイン',
+        login_register_title: '新規登録',
+        login_name: '名前',
+        login_email: 'メール',
+        login_password: 'パスワード',
+        login_err_empty: 'すべての項目を入力してください。',
+        login_err_email: 'メールアドレスが正しくありません。',
+        login_err_exists: 'このメールアドレスは既に登録されています。ログインしてください。',
+        login_err_notfound: 'アカウントが見つかりません。先に登録してください。',
+        login_err_wrongpass: 'パスワードが違います。',
+        login_success_register: '登録が完了しました！ようこそ。',
+        login_success_signin: 'ログインしました！',
+        settings_account: 'アカウント',
+        settings_not_signed: 'ログインしていません',
+
+        // ===== 追加キー（新しいページ） =====
+        katakana_title: '📖 カタカナ一覧',
+        katakana_desc: '日本語の基本46文字 — 5列、10行',
+        yoon_title: ' 拗音',
+        yoon_desc: '小さいや・ゆ・よとの組み合わせ',
+        kanji_on_label: '📖 音読み',
+        kanji_kun_label: '📖 訓読み',
+        kanji_meaning_label: '🇲🇳 意味',
+        kanji_desc_label: '📝 説明',
+        kanji_example_label: '📝 例',
+        kanji_translation_label: '🇲🇳 例の翻訳',
+        favorites_add: 'お気に入りに追加',
+        favorites_title: '❤️ お気に入り',
+        favorites_subtitle: '保存した漢字と単語のリスト',
+        favorites_empty_title: 'お気に入りはまだありません',
+        favorites_empty_desc: '漢字や単語のハートボタンを押してお気に入りに追加しましょう。',
+        fav_type_kanji: '漢字',
+        fav_type_word: '単語',
+        vocab_search_placeholder: '単語を検索...',
+        vocab_table_romaji: 'ローマ字',
+        vocab_no_results: '検索に一致する単語がありません',
+        listening_reveal: '翻訳を表示',
+        quiz_question: '質問',
+        quiz_score_label: 'スコア',
+        quiz_correct: '✅ 正解！',
+        quiz_wrong: '❌ 不正解',
+        quiz_result_title: '結果',
+        progress_title: '📊 私の進捗',
+        progress_subtitle: '学習の統計',
+        progress_favorites: 'お気に入り',
+        progress_quiz_best: 'クイズの最高スコア',
+        progress_quiz_attempts: 'クイズの回数',
+        progress_quiz_last: '前回のクイズスコア',
+        progress_theme: 'テーマ',
+        progress_language: '言語',
+        progress_details: '詳細',
+        theme_light: 'ライト',
+        theme_dark: 'ダーク',
+        settings_title: '⚙️ 設定',
+        settings_subtitle: 'アプリの設定を変更',
+        settings_language: '言語',
+        settings_language_desc: 'インターフェースの言語を選択',
+        settings_theme: 'テーマ',
+        settings_theme_desc: 'ライトモードまたはダークモード',
+        settings_clear: '保存データを削除',
+        settings_clear_desc: 'お気に入りとクイズ履歴が削除されます',
+        settings_clear_confirm: '保存したデータをすべて削除しますか？',
+        settings_cleared: 'データを削除しました。',
+        pdf_view: '表示',
+        pdf_coming_soon: '近日公開',
+        pdf_hiragana_chart: 'ひらがな表',
+        pdf_katakana_chart: 'カタカナ表',
+        pdf_kanji_chart: '漢字リスト（N5）',
+        pdf_vocab_material: '語彙教材（N5）',
+        pdf_grammar_material: '文法教材（N5）',
+
 
     }
 };
@@ -852,3 +1077,72 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }, 300);
 });
+
+
+// ===== 9. ACCORDION (түвшний хэсгүүдийг нээх/хаах) =====
+document.addEventListener('click', function(e) {
+    const header = e.target.closest('.vocab-level-header, .grammar-level-header, .listening-level-header, .pdf-level-header, .fav-level-header, .progress-level-header');
+    if (!header) return;
+    const body = header.parentElement.querySelector(':scope > [class*="level-body"]');
+    if (body) body.classList.toggle('open');
+    const icon = header.querySelector('.fa-chevron-down, .fa-chevron-up');
+    if (icon) {
+        icon.classList.toggle('fa-chevron-down');
+        icon.classList.toggle('fa-chevron-up');
+    }
+});
+
+
+// ===== 10. НЭВТРЭХ (локал бүртгэл — demo) =====
+// Хэрэглэгчид localStorage 'jp_users'-д хадгалагдана: {name, email, passHash}
+// Нууц үгийг хэш болгож хадгална (энгийн demo хэш — бодит хамгаалалт биш).
+function jpHash(str) {
+    let h1 = 0xdeadbeef, h2 = 0x41c6ce57;
+    for (let i = 0; i < str.length; i++) {
+        const ch = str.charCodeAt(i);
+        h1 = Math.imul(h1 ^ ch, 2654435761);
+        h2 = Math.imul(h2 ^ ch, 1597334677);
+    }
+    h1 = Math.imul(h1 ^ (h1 >>> 16), 2246822507) ^ Math.imul(h2 ^ (h2 >>> 13), 3266489909);
+    h2 = Math.imul(h2 ^ (h2 >>> 16), 2246822507) ^ Math.imul(h1 ^ (h1 >>> 13), 3266489909);
+    return (h2 >>> 0).toString(16) + (h1 >>> 0).toString(16);
+}
+
+function jpGetUsers() {
+    try { return JSON.parse(localStorage.getItem('jp_users') || '[]'); } catch (e) { return []; }
+}
+
+function jpSaveUsers(users) {
+    localStorage.setItem('jp_users', JSON.stringify(users));
+}
+
+function jpCurrentUser() {
+    const email = localStorage.getItem('jp_session');
+    if (!email) return null;
+    return jpGetUsers().find(function(u) { return u.email === email; }) || null;
+}
+
+function jpLogout() {
+    localStorage.removeItem('jp_session');
+    window.location.reload();
+}
+
+// Меню дэх "Нэвтрэх" холбоосыг нэвтэрсэн үед хэрэглэгчийн нэр + Гарах болгох
+function jpApplyAuthMenu() {
+    const link = document.getElementById('menuLoginLink');
+    if (!link) return;
+    const user = jpCurrentUser();
+    if (!user) return;
+    const lang = localStorage.getItem('jp-lang') || 'mn';
+    const logoutText = (typeof translations !== 'undefined' && translations[lang] && translations[lang].menu_logout) || 'Гарах';
+    link.removeAttribute('data-i18n');
+    link.href = '#';
+    link.innerHTML = '<i class="fas fa-user"></i> ' + user.name + ' — ' + logoutText;
+    link.onclick = function(e) {
+        e.preventDefault();
+        jpLogout();
+    };
+}
+
+document.addEventListener('languageChanged', jpApplyAuthMenu);
+jpApplyAuthMenu();

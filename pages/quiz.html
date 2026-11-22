@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="mn" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Япон хэл сурах апп</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../mobile.css" media="screen and (max-width: 768px)">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=keyboard_double_arrow_down" />
+</head>
+<body>
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar">
+        <div class="nav-logo">
+            <i class="#fas fa-language"></i>  <!-- ✅ #-г устгасан -->
+            <span>JP<span class="logo-highlight">IndraniL</span></span>
+        </div>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Меню нээх">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+
+    <!-- ===== МЕНЮ ===== -->
+    <div class="menu-overlay" id="menuOverlay">
+        <div class="menu-container">
+            <button class="menu-close-btn" id="menuCloseBtn" aria-label="Меню хаах">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="menu-controls">
+                <div class="control-group">
+                    <span class="control-label"></span>
+                    <button class="theme-toggle" id="themeToggle">
+                        <i class="fas fa-moon"></i>
+                        <span id="themeText"></span>
+                    </button>
+                </div>
+                <div class="control-group">
+                    <span class="control-label"><i class="fas fa-globe"></i> </span>
+                    <div class="lang-dropdown" id="langDropdown">
+                        <button class="lang-dropdown-toggle" id="langToggle">
+                            <span id="currentLangLabel">MN</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="lang-dropdown-menu" id="langMenu">
+                            <button class="lang-option active" data-lang="mn">
+                                <span class="lang-option-code">MN</span>
+                                <span class="lang-option-name">Монгол</span>
+                            </button>
+                            <button class="lang-option" data-lang="en">
+                                <span class="lang-option-code">EN</span>
+                                <span class="lang-option-name">English</span>
+                            </button>
+                            <button class="lang-option" data-lang="jp">
+                                <span class="lang-option-code">JP</span>
+                                <span class="lang-option-name">日本語</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-links">
+                <a href="../index.html" class="menu-link" data-i18n="menu_home"><i class="fas fa-home"></i> Нүүр</a>
+                <a href="hiragana.html" class="menu-link" data-i18n="menu_hiragana"><i class="fas fa-font"></i> Хирагана</a>
+                <a href="katakana.html" class="menu-link" data-i18n="menu_katakana"><i class="fas fa-font"></i> Катакана</a>
+                <a href="kanji.html" class="menu-link" data-i18n="menu_kanji"><i class="fas fa-icons"></i> Ханз</a>  <!-- ✅ Ханз → Канжи -->
+                <a href="grammar.html" class="menu-link" data-i18n="menu_grammar"><i class="fas fa-book-open"></i> Дүрэм</a>
+                <a href="vocabulary.html" class="menu-link" data-i18n="menu_vocabulary"><i class="fas fa-list-ul"></i> Үгсийн сан</a>
+                <a href="listening.html" class="menu-link" data-i18n="menu_listening"><i class="fas fa-headphones"></i> Сонсгол</a>
+                <a href="quiz.html" class="menu-link active" data-i18n="menu_quiz"><i class="fas fa-question-circle"></i> Шалгалт</a>
+                <a href="pdf.html" class="menu-link" data-i18n="menu_pdf"><i class="fas fa-file-pdf"></i> PDF</a>
+                <a href="favorites.html" class="menu-link" data-i18n="menu_favorites"><i class="fas fa-heart"></i> Дуртай</a>
+                <a href="progress.html" class="menu-link" data-i18n="menu_progress"><i class="fas fa-chart-line"></i> Ахиц</a>
+                <a href="settings.html" class="menu-link" data-i18n="menu_settings"><i class="fas fa-cog"></i> Тохиргоо</a>
+<a href="login.html" class="menu-link" id="menuLoginLink" data-i18n="menu_login"><i class="fas fa-user"></i> Нэвтрэх</a>
+            </div>
+        </div>
+    </div>
+
+        <!-- ===== ҮНДСЭН АГУУЛГА ===== -->
+    <main class="page-content">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h1 data-i18n="quiz_title">❓ Шалгалт</h1>
+                <p data-i18n="quiz_desc">Асуултад хариулж мэдлэгээ шалгаарай.</p>
+            </div>
+
+            <div class="quiz-container fade-in" id="quizBox">
+                <div class="quiz-status">
+                    <span class="quiz-counter" id="quizCounter"></span>
+                    <span class="quiz-score" id="quizScore"></span>
+                </div>
+                <div class="question-box">
+                    <div class="question-text" id="questionText"></div>
+                    <div class="options-grid" id="optionsGrid"></div>
+                    <div class="quiz-feedback" id="quizFeedback"></div>
+                    <button class="quiz-next-btn" id="quizNextBtn" data-i18n="quiz_next" disabled>Дараагийн асуулт →</button>
+                </div>
+            </div>
+
+            <div class="quiz-container quiz-result fade-in" id="quizResult" style="display:none;">
+                <div class="result-icon">🏆</div>
+                <h2 data-i18n="quiz_result_title">Үр дүн</h2>
+                <div class="result-stats" id="resultStats"></div>
+                <div class="result-percent" id="resultPercent"></div>
+                <button class="quiz-restart-btn" id="quizRestartBtn" data-i18n="quiz_restart">🔄 Дахиж эхлэх</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- ===== GO TO TOP ТОВЧ ===== -->
+<button class="go-top-btn" id="goTopBtn" aria-label="Дээд хэсэг рүү очих">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+    <!-- ===== ХӨЛ ===== -->
+    <footer class="footer">
+        <div class="container">
+            <p data-i18n="footer_text">© 2026 JP Learn. Япон хэл сурах апп.</p>
+            <div class="footer-links">
+                <a href="settings.html" data-i18n="footer_settings">Тохиргоо</a>
+                <a href="progress.html" data-i18n="footer_progress">Ахиц</a>
+                <a href="favorites.html" data-i18n="footer_favorites">Дуртай</a>
+            </div>
+        </div>
+    </footer>
+    <!-- ===== ДООД НАВИГАЦ (утасны апп) ===== -->
+    <nav class="bottom-nav" aria-label="Bottom navigation">
+        <a href="../index.html" class="bottom-nav-item"><i class="fas fa-home"></i><span data-i18n="menu_home">Нүүр</span></a>
+        <a href="kanji.html" class="bottom-nav-item"><i class="fas fa-icons"></i><span data-i18n="menu_kanji">Ханз</span></a>
+        <a href="favorites.html" class="bottom-nav-item"><i class="fas fa-heart"></i><span data-i18n="menu_favorites">Дуртай</span></a>
+        <a href="progress.html" class="bottom-nav-item"><i class="fas fa-chart-line"></i><span data-i18n="menu_progress">Ахиц</span></a>
+        <a href="settings.html" class="bottom-nav-item"><i class="fas fa-cog"></i><span data-i18n="menu_settings">Тохиргоо</span></a>
+    </nav>
+    <script src="../script.js"></script>
+    <script src="../hiragana.js"></script>
+    <script src="../katakana.js"></script>
+    <script src="../kanji-data.js"></script>
+    <script src="../vocabulary-data.js"></script>
+    <script>
+function t(key) {
+    try {
+        var lang = localStorage.getItem('jp-lang') || 'mn';
+        return (translations[lang] && translations[lang][key]) || key;
+    } catch (e) { return key; }
+}
+(function() {
+    var counterEl = document.getElementById('quizCounter');
+    var scoreEl = document.getElementById('quizScore');
+    var questionEl = document.getElementById('questionText');
+    var optionsEl = document.getElementById('optionsGrid');
+    var feedbackEl = document.getElementById('quizFeedback');
+    var nextBtn = document.getElementById('quizNextBtn');
+    var boxEl = document.getElementById('quizBox');
+    var resultEl = document.getElementById('quizResult');
+    var resultStats = document.getElementById('resultStats');
+    var resultPercent = document.getElementById('resultPercent');
+    var restartBtn = document.getElementById('quizRestartBtn');
+    if (!questionEl) return;
+
+    var TOTAL = 10;
+    var questions = [];
+    var current = 0;
+    var score = 0;
+    var answered = false;
+
+    function shuffle(arr) {
+        var a = arr.slice();
+        for (var i = a.length - 1; i > 0; i--) {
+            var j = Math.floor(Math.random() * (i + 1));
+            var tmp = a[i]; a[i] = a[j]; a[j] = tmp;
+        }
+        return a;
+    }
+    function pick(arr, n, exclude) {
+        return shuffle(arr.filter(function(x) { return x !== exclude; })).slice(0, n);
+    }
+
+    function buildQuestions() {
+        var pool = [];
+        if (typeof hiraganaData !== 'undefined') {
+            hiraganaData.slice(0, 46).forEach(function(k) {
+                pool.push({ q: k.kana, a: k.romaji, all: hiraganaData.slice(0, 46).map(function(x) { return x.romaji; }) });
+            });
+        }
+        if (typeof katakanaData !== 'undefined') {
+            katakanaData.slice(0, 46).forEach(function(k) {
+                pool.push({ q: k.kana, a: k.romaji, all: katakanaData.slice(0, 46).map(function(x) { return x.romaji; }) });
+            });
+        }
+        if (typeof kanjiData !== 'undefined') {
+            Object.keys(kanjiData).forEach(function(ch) {
+                pool.push({ q: ch, a: kanjiData[ch].meaning, all: Object.keys(kanjiData).map(function(x) { return kanjiData[x].meaning; }) });
+            });
+        }
+        if (typeof vocabularyData !== 'undefined') {
+            vocabularyData.forEach(function(w) {
+                pool.push({ q: w.jp + ' (' + w.reading + ')', a: w.mn, all: vocabularyData.map(function(x) { return x.mn; }) });
+            });
+        }
+        return shuffle(pool).slice(0, TOTAL).map(function(item) {
+            var opts = shuffle([item.a].concat(pick(item.all, 3, item.a)));
+            return { q: item.q, a: item.a, opts: opts };
+        });
+    }
+
+    function renderStatus() {
+        counterEl.textContent = t('quiz_question') + ' ' + (current + 1) + ' / ' + questions.length;
+        scoreEl.textContent = t('quiz_score_label') + ': ' + score;
+    }
+
+    function renderQuestion() {
+        answered = false;
+        var item = questions[current];
+        renderStatus();
+        questionEl.textContent = item.q;
+        feedbackEl.textContent = '';
+        nextBtn.disabled = true;
+        nextBtn.textContent = (current === questions.length - 1) ? t('quiz_finish') : t('quiz_next');
+        optionsEl.innerHTML = '';
+        item.opts.forEach(function(opt) {
+            var b = document.createElement('button');
+            b.className = 'option-btn';
+            b.textContent = opt;
+            b.addEventListener('click', function() { answer(b, opt); });
+            optionsEl.appendChild(b);
+        });
+    }
+
+    function answer(btn, opt) {
+        if (answered) return;
+        answered = true;
+        var item = questions[current];
+        var buttons = optionsEl.querySelectorAll('.option-btn');
+        buttons.forEach(function(b) {
+            b.disabled = true;
+            if (b.textContent === item.a) b.classList.add('correct');
+        });
+        if (opt === item.a) {
+            score++;
+            feedbackEl.textContent = t('quiz_correct');
+        } else {
+            btn.classList.add('wrong');
+            feedbackEl.textContent = t('quiz_wrong') + ' — ' + item.a;
+        }
+        renderStatus();
+        nextBtn.disabled = false;
+    }
+
+    function finish() {
+        boxEl.style.display = 'none';
+        resultEl.style.display = 'block';
+        var pct = Math.round(score / questions.length * 100);
+        resultStats.textContent = score + ' / ' + questions.length;
+        resultPercent.textContent = pct + '%';
+        var attempts = parseInt(localStorage.getItem('jp_quiz_attempts') || '0', 10) + 1;
+        localStorage.setItem('jp_quiz_attempts', String(attempts));
+        localStorage.setItem('jp_quiz_last', String(score));
+        var best = parseInt(localStorage.getItem('jp_quiz_best') || '0', 10);
+        if (score > best) localStorage.setItem('jp_quiz_best', String(score));
+    }
+
+    function start() {
+        questions = buildQuestions();
+        current = 0;
+        score = 0;
+        boxEl.style.display = 'block';
+        resultEl.style.display = 'none';
+        renderQuestion();
+    }
+
+    nextBtn.addEventListener('click', function() {
+        if (current < questions.length - 1) { current++; renderQuestion(); }
+        else finish();
+    });
+    restartBtn.addEventListener('click', start);
+    document.addEventListener('languageChanged', function() {
+        if (resultEl.style.display === 'none') renderStatus();
+        nextBtn.textContent = (current === questions.length - 1) ? t('quiz_finish') : t('quiz_next');
+    });
+    start();
+})();
+    </script>
+</body>
+</html>

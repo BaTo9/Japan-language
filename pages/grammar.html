@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="mn" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Япон хэл сурах апп</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../mobile.css" media="screen and (max-width: 768px)">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=keyboard_double_arrow_down" />
+</head>
+<body>
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar">
+        <div class="nav-logo">
+            <i class="#fas fa-language"></i>  <!-- ✅ #-г устгасан -->
+            <span>JP<span class="logo-highlight">IndraniL</span></span>
+        </div>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Меню нээх">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+
+    <!-- ===== МЕНЮ ===== -->
+    <div class="menu-overlay" id="menuOverlay">
+        <div class="menu-container">
+            <button class="menu-close-btn" id="menuCloseBtn" aria-label="Меню хаах">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="menu-controls">
+                <div class="control-group">
+                    <span class="control-label"></span>
+                    <button class="theme-toggle" id="themeToggle">
+                        <i class="fas fa-moon"></i>
+                        <span id="themeText"></span>
+                    </button>
+                </div>
+                <div class="control-group">
+                    <span class="control-label"><i class="fas fa-globe"></i> </span>
+                    <div class="lang-dropdown" id="langDropdown">
+                        <button class="lang-dropdown-toggle" id="langToggle">
+                            <span id="currentLangLabel">MN</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="lang-dropdown-menu" id="langMenu">
+                            <button class="lang-option active" data-lang="mn">
+                                <span class="lang-option-code">MN</span>
+                                <span class="lang-option-name">Монгол</span>
+                            </button>
+                            <button class="lang-option" data-lang="en">
+                                <span class="lang-option-code">EN</span>
+                                <span class="lang-option-name">English</span>
+                            </button>
+                            <button class="lang-option" data-lang="jp">
+                                <span class="lang-option-code">JP</span>
+                                <span class="lang-option-name">日本語</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-links">
+                <a href="../index.html" class="menu-link" data-i18n="menu_home"><i class="fas fa-home"></i> Нүүр</a>
+                <a href="hiragana.html" class="menu-link" data-i18n="menu_hiragana"><i class="fas fa-font"></i> Хирагана</a>
+                <a href="katakana.html" class="menu-link" data-i18n="menu_katakana"><i class="fas fa-font"></i> Катакана</a>
+                <a href="kanji.html" class="menu-link" data-i18n="menu_kanji"><i class="fas fa-icons"></i> Ханз</a>  <!-- ✅ Ханз → Канжи -->
+                <a href="grammar.html" class="menu-link active" data-i18n="menu_grammar"><i class="fas fa-book-open"></i> Дүрэм</a>
+                <a href="vocabulary.html" class="menu-link" data-i18n="menu_vocabulary"><i class="fas fa-list-ul"></i> Үгсийн сан</a>
+                <a href="listening.html" class="menu-link" data-i18n="menu_listening"><i class="fas fa-headphones"></i> Сонсгол</a>
+                <a href="quiz.html" class="menu-link" data-i18n="menu_quiz"><i class="fas fa-question-circle"></i> Шалгалт</a>
+                <a href="pdf.html" class="menu-link" data-i18n="menu_pdf"><i class="fas fa-file-pdf"></i> PDF</a>
+                <a href="favorites.html" class="menu-link" data-i18n="menu_favorites"><i class="fas fa-heart"></i> Дуртай</a>
+                <a href="progress.html" class="menu-link" data-i18n="menu_progress"><i class="fas fa-chart-line"></i> Ахиц</a>
+                <a href="settings.html" class="menu-link" data-i18n="menu_settings"><i class="fas fa-cog"></i> Тохиргоо</a>
+<a href="login.html" class="menu-link" id="menuLoginLink" data-i18n="menu_login"><i class="fas fa-user"></i> Нэвтрэх</a>
+            </div>
+        </div>
+    </div>
+
+        <!-- ===== ҮНДСЭН АГУУЛГА ===== -->
+    <main class="page-content">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h1 data-i18n="grammar_title">📚 Япон хэлний дүрэм</h1>
+                <p data-i18n="grammar_subtitle">Түвшингээр эрэмбэлсэн дүрмийн тайлбар</p>
+            </div>
+            <div class="grammar-list">
+                <div class="grammar-item fade-in">
+                    <div class="grammar-header">
+                        <span class="grammar-title">〜は〜です</span>
+                        <span class="grammar-level">N5</span>
+                    </div>
+                    <p class="grammar-desc">Нэр үгийг танилцуулах үндсэн бүтэц. «А нь Б» гэсэн утгатай. は-г «ва» гэж дуудна.</p>
+                    <div class="grammar-example">
+                        <div>
+                            <span class="jp">わたしは学生です。</span><br>
+                            <span class="romaji">わたしは がくせい です — watashi wa gakusei desu</span>
+                        </div>
+                        <span class="mn">Би оюутан.</span>
+                    </div>
+                </div>
+                <div class="grammar-item fade-in">
+                    <div class="grammar-header">
+                        <span class="grammar-title">〜は〜じゃありません</span>
+                        <span class="grammar-level">N5</span>
+                    </div>
+                    <p class="grammar-desc">〜です-ийн үгүйсгэсэн хэлбэр. «Б биш» гэсэн утгатай.</p>
+                    <div class="grammar-example">
+                        <div>
+                            <span class="jp">わたしは先生じゃありません。</span><br>
+                            <span class="romaji">わたしは せんせい じゃありません — watashi wa sensei ja arimasen</span>
+                        </div>
+                        <span class="mn">Би багш биш.</span>
+                    </div>
+                </div>
+                <div class="grammar-item fade-in">
+                    <div class="grammar-header">
+                        <span class="grammar-title">〜ですか</span>
+                        <span class="grammar-level">N5</span>
+                    </div>
+                    <p class="grammar-desc">Өгүүлбэрийн төгсгөлд か нэмбэл асуух өгүүлбэр болно.</p>
+                    <div class="grammar-example">
+                        <div>
+                            <span class="jp">これは何ですか。</span><br>
+                            <span class="romaji">これは なんですか — kore wa nan desu ka</span>
+                        </div>
+                        <span class="mn">Энэ юу вэ?</span>
+                    </div>
+                </div>
+                <div class="grammar-item fade-in">
+                    <div class="grammar-header">
+                        <span class="grammar-title">〜の〜</span>
+                        <span class="grammar-level">N5</span>
+                    </div>
+                    <p class="grammar-desc">Өмчлөх болон холбох утга. «А-ийн Б» гэсэн бүтэц.</p>
+                    <div class="grammar-example">
+                        <div>
+                            <span class="jp">日本は車が有名です。日本の車です。</span><br>
+                            <span class="romaji">にほんの くるま です — nihon no kuruma desu</span>
+                        </div>
+                        <span class="mn">Энэ бол Японы машин.</span>
+                    </div>
+                </div>
+                <div class="grammar-item fade-in">
+                    <div class="grammar-header">
+                        <span class="grammar-title">これ・それ・あれ</span>
+                        <span class="grammar-level">N5</span>
+                    </div>
+                    <p class="grammar-desc">Зүйл заах үгс: これ (энэ, ойр), それ (тэр, дунд), あれ (тэр, хол).</p>
+                    <div class="grammar-example">
+                        <div>
+                            <span class="jp">それは私の本です。</span><br>
+                            <span class="romaji">それは わたしの ほん です — sore wa watashi no hon desu</span>
+                        </div>
+                        <span class="mn">Тэр бол миний ном.</span>
+                    </div>
+                </div>
+                <div class="grammar-item fade-in">
+                    <div class="grammar-header">
+                        <span class="grammar-title">ここ・そこ・あそこ</span>
+                        <span class="grammar-level">N5</span>
+                    </div>
+                    <p class="grammar-desc">Газар заах үгс: ここ (энд), そこ (тэнд), あそこ (тэнд хол).</p>
+                    <div class="grammar-example">
+                        <div>
+                            <span class="jp">トイレはあそこです。</span><br>
+                            <span class="romaji">トイレは あそこ です — toire wa asoko desu</span>
+                        </div>
+                        <span class="mn">Ариун цэврийн өрөө тэнд байна.</span>
+                    </div>
+                </div>
+                <div class="grammar-item fade-in">
+                    <div class="grammar-header">
+                        <span class="grammar-title">〜に〜が あります／います</span>
+                        <span class="grammar-level">N5</span>
+                    </div>
+                    <p class="grammar-desc">Байгаа газрыг заана. Зүйлд あります, амьд зүйлд います хэрэглэнэ.</p>
+                    <div class="grammar-example">
+                        <div>
+                            <span class="jp">部屋に猫がいます。</span><br>
+                            <span class="romaji">へやに ねこが います — heya ni neko ga imasu</span>
+                        </div>
+                        <span class="mn">Өрөөнд муур байна.</span>
+                    </div>
+                </div>
+                <div class="grammar-item fade-in">
+                    <div class="grammar-header">
+                        <span class="grammar-title">〜へ 行きます</span>
+                        <span class="grammar-level">N5</span>
+                    </div>
+                    <p class="grammar-desc">Чиглэлийг へ (э гэж дуудна) тэмдэглэнэ.</p>
+                    <div class="grammar-example">
+                        <div>
+                            <span class="jp">学校へ行きます。</span><br>
+                            <span class="romaji">がっこうへ いきます — gakkou e ikimasu</span>
+                        </div>
+                        <span class="mn">Сургууль руу явна.</span>
+                    </div>
+                </div>
+                <div class="grammar-item fade-in">
+                    <div class="grammar-header">
+                        <span class="grammar-title">〜を〜ます</span>
+                        <span class="grammar-level">N5</span>
+                    </div>
+                    <p class="grammar-desc">Үйл үгийн тусагдахууныг を тэмдэглэнэ.</p>
+                    <div class="grammar-example">
+                        <div>
+                            <span class="jp">ご飯を食べます。</span><br>
+                            <span class="romaji">ごはんを たべます — gohan wo tabemasu</span>
+                        </div>
+                        <span class="mn">Хоол иднэ.</span>
+                    </div>
+                </div>
+                <div class="grammar-item fade-in">
+                    <div class="grammar-header">
+                        <span class="grammar-title">〜で（場所）〜ます</span>
+                        <span class="grammar-level">N5</span>
+                    </div>
+                    <p class="grammar-desc">Үйлдэл болох газрыг で тэмдэглэнэ.</p>
+                    <div class="grammar-example">
+                        <div>
+                            <span class="jp">図書館で勉強します。</span><br>
+                            <span class="romaji">としょかんで べんきょうします — toshokan de benkyou shimasu</span>
+                        </div>
+                        <span class="mn">Номын санд сурна.</span>
+                    </div>
+                </div>
+                <div class="grammar-item fade-in">
+                    <div class="grammar-header">
+                        <span class="grammar-title">〜と〜</span>
+                        <span class="grammar-level">N5</span>
+                    </div>
+                    <p class="grammar-desc">«Ба», «хамт» гэсэн утга. Нэр үгсийг холбон эсвэл хамтрагчийг заана.</p>
+                    <div class="grammar-example">
+                        <div>
+                            <span class="jp">友達と映画を見ます。</span><br>
+                            <span class="romaji">ともだちと えいがを みます — tomodachi to eiga wo mimasu</span>
+                        </div>
+                        <span class="mn">Найзтайгаа кино үзнэ.</span>
+                    </div>
+                </div>
+                <div class="grammar-item fade-in">
+                    <div class="grammar-header">
+                        <span class="grammar-title">〜から〜まで</span>
+                        <span class="grammar-level">N5</span>
+                    </div>
+                    <p class="grammar-desc">«-аас -хүртэл» — эхлэл ба төгсгөлийн цэг/цагийг заана.</p>
+                    <div class="grammar-example">
+                        <div>
+                            <span class="jp">9時から5時まで働きます。</span><br>
+                            <span class="romaji">くじから ごじまで はたらきます — kuji kara goji made hatarakimasu</span>
+                        </div>
+                        <span class="mn">9 цагаас 5 цаг хүртэл ажиллана.</span>
+                    </div>
+                </div>
+                <div class="grammar-item fade-in">
+                    <div class="grammar-header">
+                        <span class="grammar-title">い形容詞 ＋ です</span>
+                        <span class="grammar-level">N5</span>
+                    </div>
+                    <p class="grammar-desc">い-ээр төгсдөг тэмдэг нэр шууд です-тэй холбогдоно.</p>
+                    <div class="grammar-example">
+                        <div>
+                            <span class="jp">この本は高いです。</span><br>
+                            <span class="romaji">この ほんは たかいです — kono hon wa takai desu</span>
+                        </div>
+                        <span class="mn">Энэ ном үнэтэй.</span>
+                    </div>
+                </div>
+                <div class="grammar-item fade-in">
+                    <div class="grammar-header">
+                        <span class="grammar-title">な形容詞 ＋ です</span>
+                        <span class="grammar-level">N5</span>
+                    </div>
+                    <p class="grammar-desc">な-тэмдэг нэр нэр үгийн өмнө な авна, өгүүлбэрийн төгсгөлд です байна.</p>
+                    <div class="grammar-example">
+                        <div>
+                            <span class="jp">この町は静かです。</span><br>
+                            <span class="romaji">この まちは しずかです — kono machi wa shizuka desu</span>
+                        </div>
+                        <span class="mn">Энэ хот нам гүм.</span>
+                    </div>
+                </div>
+                <div class="grammar-item fade-in">
+                    <div class="grammar-header">
+                        <span class="grammar-title">〜たいです</span>
+                        <span class="grammar-level">N5</span>
+                    </div>
+                    <p class="grammar-desc">«Хиймээр байна» — хүслээ илэрхийлнэ. Үйл үгийн ます хэлбэрийн өмнөх хэсэгт залгана.</p>
+                    <div class="grammar-example">
+                        <div>
+                            <span class="jp">日本へ行きたいです。</span><br>
+                            <span class="romaji">にほんへ いきたいです — nihon e ikitai desu</span>
+                        </div>
+                        <span class="mn">Япон руу явмаар байна.</span>
+                    </div>
+                </div>
+                <div class="grammar-item fade-in">
+                    <div class="grammar-header">
+                        <span class="grammar-title">〜てください</span>
+                        <span class="grammar-level">N5</span>
+                    </div>
+                    <p class="grammar-desc">Гуйх хэлбэр: «...ж өгөөч». Үйл үгийн て хэлбэрт залгана.</p>
+                    <div class="grammar-example">
+                        <div>
+                            <span class="jp">ゆっくり話してください。</span><br>
+                            <span class="romaji">ゆっくり はなしてください — yukkuri hanashite kudasai</span>
+                        </div>
+                        <span class="mn">Удаан ярьж өгөөч.</span>
+                    </div>
+                </div>
+                <div class="grammar-item fade-in">
+                    <div class="grammar-header">
+                        <span class="grammar-title">〜ましょう</span>
+                        <span class="grammar-level">N5</span>
+                    </div>
+                    <p class="grammar-desc">«...цгаая» — хамтдаа хийхийг урина.</p>
+                    <div class="grammar-example">
+                        <div>
+                            <span class="jp">一緒に行きましょう。</span><br>
+                            <span class="romaji">いっしょに いきましょう — issho ni ikimashou</span>
+                        </div>
+                        <span class="mn">Хамтдаа явцгаая.</span>
+                    </div>
+                </div>
+                <div class="grammar-item fade-in">
+                    <div class="grammar-header">
+                        <span class="grammar-title">〜ました（過去形）</span>
+                        <span class="grammar-level">N5</span>
+                    </div>
+                    <p class="grammar-desc">Өнгөрсөн цаг: ます → ました, ません → ませんでした гэж хувирна.</p>
+                    <div class="grammar-example">
+                        <div>
+                            <span class="jp">昨日、映画を見ました。</span><br>
+                            <span class="romaji">きのう、えいがを みました — kinou, eiga wo mimashita</span>
+                        </div>
+                        <span class="mn">Өчигдөр кино үзсэн.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ===== GO TO TOP ТОВЧ ===== -->
+<button class="go-top-btn" id="goTopBtn" aria-label="Дээд хэсэг рүү очих">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+    <!-- ===== ХӨЛ ===== -->
+    <footer class="footer">
+        <div class="container">
+            <p data-i18n="footer_text">© 2026 JP Learn. Япон хэл сурах апп.</p>
+            <div class="footer-links">
+                <a href="settings.html" data-i18n="footer_settings">Тохиргоо</a>
+                <a href="progress.html" data-i18n="footer_progress">Ахиц</a>
+                <a href="favorites.html" data-i18n="footer_favorites">Дуртай</a>
+            </div>
+        </div>
+    </footer>
+    <!-- ===== ДООД НАВИГАЦ (утасны апп) ===== -->
+    <nav class="bottom-nav" aria-label="Bottom navigation">
+        <a href="../index.html" class="bottom-nav-item"><i class="fas fa-home"></i><span data-i18n="menu_home">Нүүр</span></a>
+        <a href="kanji.html" class="bottom-nav-item"><i class="fas fa-icons"></i><span data-i18n="menu_kanji">Ханз</span></a>
+        <a href="favorites.html" class="bottom-nav-item"><i class="fas fa-heart"></i><span data-i18n="menu_favorites">Дуртай</span></a>
+        <a href="progress.html" class="bottom-nav-item"><i class="fas fa-chart-line"></i><span data-i18n="menu_progress">Ахиц</span></a>
+        <a href="settings.html" class="bottom-nav-item"><i class="fas fa-cog"></i><span data-i18n="menu_settings">Тохиргоо</span></a>
+    </nav>
+    <script src="../script.js"></script>
+</body>
+</html>

@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Япон хэл сурах апп</title>
-    <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="../mobile.css" media="screen and (max-width: 768px)">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile.css" media="screen and (max-width: 768px)">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -73,7 +73,7 @@
        Хажуугийн меню 
     ================ -->
 <div class="menu-links">
-<a href="../index.html" class="menu-link active" data-i18n="menu_home"><i class="fas fa-home"></i> Нүүр</a>
+<a href="index.html" class="menu-link active" data-i18n="menu_home"><i class="fas fa-home"></i> Нүүр</a>
 <a href="pages/hiragana.html" class="menu-link" data-i18n="menu_hiragana"><i class="fas fa-font"></i> Хирагана</a>
 <a href="pages/katakana.html" class="menu-link" data-i18n="menu_katakana"><i class="fas fa-font"></i> Катакана</a>
  <a href="pages/kanji.html" class="menu-link" data-i18n="menu_kanji"><i class="fas fa-icons"></i> Ханз</a> 
@@ -85,6 +85,7 @@
 <a href="pages/favorites.html" class="menu-link" data-i18n="menu_favorites"><i class="fas fa-heart"></i> Дуртай</a>
 <a href="pages/progress.html" class="menu-link" data-i18n="menu_progress"><i class="fas fa-chart-line"></i> Ахиц</a>
 <a href="pages/settings.html" class="menu-link" data-i18n="menu_settings"><i class="fas fa-cog"></i> Тохиргоо</a>
+<a href="pages/login.html" class="menu-link" id="menuLoginLink" data-i18n="menu_login"><i class="fas fa-user"></i> Нэвтрэх</a>
           </div>
      </div>
 </div>
@@ -92,7 +93,7 @@
     <!-- ============= 
     HERO ХЭСЭГ showcase
     =============== -->
-    <section class="hero" style="background-image: url('img/fon-01.jpg');">
+    <section class="hero" style="background-image: url('img/fon-01.jpg'); background-color: #1f2937;">
         <div class="hero-content">
             <h1 data-i18n="hero_title">Япон хэлний ертөнцөд тавтай морил</h1>
             <p data-i18n="hero_desc">Өдөр бүр 10 минут, тогтмол дасгал хийж Япон хэлээ сайжруулаарай.</p>
@@ -295,6 +296,15 @@
             </div>
         </div>
     </footer>
+
+    <!-- ===== ДООД НАВИГАЦ (утасны апп) ===== -->
+    <nav class="bottom-nav" aria-label="Bottom navigation">
+        <a href="index.html" class="bottom-nav-item active"><i class="fas fa-home"></i><span data-i18n="menu_home">Нүүр</span></a>
+        <a href="pages/kanji.html" class="bottom-nav-item"><i class="fas fa-icons"></i><span data-i18n="menu_kanji">Ханз</span></a>
+        <a href="pages/favorites.html" class="bottom-nav-item"><i class="fas fa-heart"></i><span data-i18n="menu_favorites">Дуртай</span></a>
+        <a href="pages/progress.html" class="bottom-nav-item"><i class="fas fa-chart-line"></i><span data-i18n="menu_progress">Ахиц</span></a>
+        <a href="pages/settings.html" class="bottom-nav-item"><i class="fas fa-cog"></i><span data-i18n="menu_settings">Тохиргоо</span></a>
+    </nav>
 
     <script src="script.js"></script>
 </body>

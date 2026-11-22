@@ -1,0 +1,170 @@
+/* ===========================
+   MOBILE.CSS — Утасны харагдац (max-width: 768px)
+   Доод навигац + responsive тохируулга
+   =========================== */
+
+/* ===== ДООД НАВИГАЦ (утасны апп) ===== */
+body {
+    padding-bottom: 74px;
+}
+
+.bottom-nav {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 900;
+    display: flex;
+    background: var(--bg-navbar);
+    border-top: 1px solid var(--border-color);
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.08);
+    padding-bottom: env(safe-area-inset-bottom);
+}
+
+.bottom-nav-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    padding: 8px 2px 6px;
+    color: var(--text-secondary);
+    font-size: 0.62rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.bottom-nav-item i {
+    font-size: 1.15rem;
+}
+
+.bottom-nav-item.active {
+    color: var(--accent);
+}
+
+/* Дээш гарах товчийг доод навигацаас дээш нь өргөх */
+.go-top-btn {
+    bottom: 88px;
+}
+
+/* ===== НАВБАР / МЕНЮ ===== */
+.navbar {
+    padding: 0.7rem 1rem;
+}
+
+.menu-container {
+    width: 88%;
+    max-width: 340px;
+}
+
+/* ===== HERO ===== */
+.hero {
+    min-height: 78vh;
+    padding: 5rem 1.2rem 4rem;
+}
+
+.hero-content h1 {
+    font-size: 1.9rem;
+    line-height: 1.25;
+}
+
+.hero-content p {
+    font-size: 1rem;
+}
+
+/* ===== ГАРЧИГ ===== */
+.section-header h2,
+.page-content h1 {
+    font-size: 1.7rem;
+}
+
+.section-header p,
+.subtitle {
+    font-size: 0.98rem;
+}
+
+.showcase {
+    padding: 2.5rem 1rem;
+}
+
+.showcase-grid-5 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.showcase-card {
+    padding: 1.4rem 1rem;
+}
+
+/* ===== СТАТИСТИК / FEATURES ===== */
+.stats-grid-home {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.features-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+/* ===== КАНА / ХАНЗ ===== */
+.kana-grid-5 {
+    gap: 8px;
+    margin-bottom: 2rem;
+}
+
+.kana-card-5 {
+    min-height: 74px;
+    padding: 10px 4px;
+}
+
+.kana-card-5 .kana-char {
+    font-size: 2rem;
+}
+
+.kanji-grid-5 {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.kanji-card-5 .kanji-char {
+    font-size: 2rem;
+}
+
+.level-header h2 {
+    font-size: 1.25rem;
+}
+
+/* ===== MODAL ===== */
+.modal-container {
+    width: 92%;
+    max-height: 88vh;
+    overflow-y: auto;
+}
+
+.modal-char {
+    font-size: 4rem;
+}
+
+/* ===== ХҮСНЭГТ / ЖАГСААЛТ ===== */
+.vocab-table .vocab-row {
+    grid-template-columns: 1fr 1fr 0.8fr 1fr 34px;
+    font-size: 0.88rem;
+    gap: 6px;
+}
+
+.grammar-example {
+    flex-direction: column;
+    gap: 4px;
+}
+
+/* ===== ХӨЛ ===== */
+.footer {
+    padding-bottom: 1rem;
+}
+
+.footer-links {
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}

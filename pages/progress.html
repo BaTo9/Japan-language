@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="mn" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Япон хэл сурах апп</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../mobile.css" media="screen and (max-width: 768px)">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=keyboard_double_arrow_down" />
+</head>
+<body>
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar">
+        <div class="nav-logo">
+            <i class="#fas fa-language"></i>  <!-- ✅ #-г устгасан -->
+            <span>JP<span class="logo-highlight">IndraniL</span></span>
+        </div>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Меню нээх">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+
+    <!-- ===== МЕНЮ ===== -->
+    <div class="menu-overlay" id="menuOverlay">
+        <div class="menu-container">
+            <button class="menu-close-btn" id="menuCloseBtn" aria-label="Меню хаах">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="menu-controls">
+                <div class="control-group">
+                    <span class="control-label"></span>
+                    <button class="theme-toggle" id="themeToggle">
+                        <i class="fas fa-moon"></i>
+                        <span id="themeText"></span>
+                    </button>
+                </div>
+                <div class="control-group">
+                    <span class="control-label"><i class="fas fa-globe"></i> </span>
+                    <div class="lang-dropdown" id="langDropdown">
+                        <button class="lang-dropdown-toggle" id="langToggle">
+                            <span id="currentLangLabel">MN</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="lang-dropdown-menu" id="langMenu">
+                            <button class="lang-option active" data-lang="mn">
+                                <span class="lang-option-code">MN</span>
+                                <span class="lang-option-name">Монгол</span>
+                            </button>
+                            <button class="lang-option" data-lang="en">
+                                <span class="lang-option-code">EN</span>
+                                <span class="lang-option-name">English</span>
+                            </button>
+                            <button class="lang-option" data-lang="jp">
+                                <span class="lang-option-code">JP</span>
+                                <span class="lang-option-name">日本語</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-links">
+                <a href="../index.html" class="menu-link" data-i18n="menu_home"><i class="fas fa-home"></i> Нүүр</a>
+                <a href="hiragana.html" class="menu-link" data-i18n="menu_hiragana"><i class="fas fa-font"></i> Хирагана</a>
+                <a href="katakana.html" class="menu-link" data-i18n="menu_katakana"><i class="fas fa-font"></i> Катакана</a>
+                <a href="kanji.html" class="menu-link" data-i18n="menu_kanji"><i class="fas fa-icons"></i> Ханз</a>  <!-- ✅ Ханз → Канжи -->
+                <a href="grammar.html" class="menu-link" data-i18n="menu_grammar"><i class="fas fa-book-open"></i> Дүрэм</a>
+                <a href="vocabulary.html" class="menu-link" data-i18n="menu_vocabulary"><i class="fas fa-list-ul"></i> Үгсийн сан</a>
+                <a href="listening.html" class="menu-link" data-i18n="menu_listening"><i class="fas fa-headphones"></i> Сонсгол</a>
+                <a href="quiz.html" class="menu-link" data-i18n="menu_quiz"><i class="fas fa-question-circle"></i> Шалгалт</a>
+                <a href="pdf.html" class="menu-link" data-i18n="menu_pdf"><i class="fas fa-file-pdf"></i> PDF</a>
+                <a href="favorites.html" class="menu-link" data-i18n="menu_favorites"><i class="fas fa-heart"></i> Дуртай</a>
+                <a href="progress.html" class="menu-link active" data-i18n="menu_progress"><i class="fas fa-chart-line"></i> Ахиц</a>
+                <a href="settings.html" class="menu-link" data-i18n="menu_settings"><i class="fas fa-cog"></i> Тохиргоо</a>
+<a href="login.html" class="menu-link" id="menuLoginLink" data-i18n="menu_login"><i class="fas fa-user"></i> Нэвтрэх</a>
+            </div>
+        </div>
+    </div>
+
+        <!-- ===== ҮНДСЭН АГУУЛГА ===== -->
+    <main class="page-content">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h1 data-i18n="progress_title">📊 Миний ахиц</h1>
+                <p data-i18n="progress_subtitle">Сурсан зүйлсийн статистик</p>
+            </div>
+
+            <div class="progress-overview fade-in">
+                <div class="overview-card">
+                    <div class="overview-icon">❤️</div>
+                    <div class="overview-value" id="progFavCount">0</div>
+                    <div class="overview-label" data-i18n="progress_favorites">Дуртай зүйлс</div>
+                </div>
+                <div class="overview-card">
+                    <div class="overview-icon">🏆</div>
+                    <div class="overview-value" id="progQuizBest">0</div>
+                    <div class="overview-label" data-i18n="progress_quiz_best">Шалгалтын шилдэг оноо</div>
+                    <div class="progress-bar"><div class="progress-fill" id="progQuizBestBar" style="width:0%; background: var(--accent);"></div></div>
+                </div>
+                <div class="overview-card">
+                    <div class="overview-icon">📝</div>
+                    <div class="overview-value" id="progQuizAttempts">0</div>
+                    <div class="overview-label" data-i18n="progress_quiz_attempts">Шалгалт өгсөн тоо</div>
+                </div>
+                <div class="overview-card">
+                    <div class="overview-icon">🎌</div>
+                    <div class="overview-value" id="progLang">MN</div>
+                    <div class="overview-label" data-i18n="progress_language">Хэл</div>
+                </div>
+            </div>
+
+            <div class="progress-level fade-in">
+                <div class="progress-level-header">
+                    <h3 class="progress-level-title" data-i18n="progress_details">Дэлгэрэнгүй</h3>
+                    <button class="progress-toggle-btn"><i class="fas fa-chevron-up"></i></button>
+                </div>
+                <div class="progress-level-body open">
+                    <div class="progress-stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-label" data-i18n="progress_theme">Сэдэв</span>
+                            <span class="stat-value" id="progTheme">-</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label" data-i18n="progress_quiz_last">Сүүлийн шалгалтын оноо</span>
+                            <span class="stat-value" id="progQuizLast">-</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label" data-i18n="progress_favorites">Дуртай зүйлс</span>
+                            <span class="stat-value" id="progFavCount2">0</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label" data-i18n="progress_quiz_best">Шалгалтын шилдэг оноо</span>
+                            <span class="stat-value" id="progQuizBest2">0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ===== GO TO TOP ТОВЧ ===== -->
+<button class="go-top-btn" id="goTopBtn" aria-label="Дээд хэсэг рүү очих">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+    <!-- ===== ХӨЛ ===== -->
+    <footer class="footer">
+        <div class="container">
+            <p data-i18n="footer_text">© 2026 JP Learn. Япон хэл сурах апп.</p>
+            <div class="footer-links">
+                <a href="settings.html" data-i18n="footer_settings">Тохиргоо</a>
+                <a href="progress.html" data-i18n="footer_progress">Ахиц</a>
+                <a href="favorites.html" data-i18n="footer_favorites">Дуртай</a>
+            </div>
+        </div>
+    </footer>
+    <!-- ===== ДООД НАВИГАЦ (утасны апп) ===== -->
+    <nav class="bottom-nav" aria-label="Bottom navigation">
+        <a href="../index.html" class="bottom-nav-item"><i class="fas fa-home"></i><span data-i18n="menu_home">Нүүр</span></a>
+        <a href="kanji.html" class="bottom-nav-item"><i class="fas fa-icons"></i><span data-i18n="menu_kanji">Ханз</span></a>
+        <a href="favorites.html" class="bottom-nav-item"><i class="fas fa-heart"></i><span data-i18n="menu_favorites">Дуртай</span></a>
+        <a href="progress.html" class="bottom-nav-item active"><i class="fas fa-chart-line"></i><span data-i18n="menu_progress">Ахиц</span></a>
+        <a href="settings.html" class="bottom-nav-item"><i class="fas fa-cog"></i><span data-i18n="menu_settings">Тохиргоо</span></a>
+    </nav>
+    <script src="../script.js"></script>
+    <script>
+function t(key) {
+    try {
+        var lang = localStorage.getItem('jp-lang') || 'mn';
+        return (translations[lang] && translations[lang][key]) || key;
+    } catch (e) { return key; }
+}
+(function() {
+    function render() {
+        var favs = [];
+        try { favs = JSON.parse(localStorage.getItem('jp_favorites') || '[]'); } catch (e) {}
+        var best = parseInt(localStorage.getItem('jp_quiz_best') || '0', 10);
+        var attempts = parseInt(localStorage.getItem('jp_quiz_attempts') || '0', 10);
+        var last = localStorage.getItem('jp_quiz_last');
+        var theme = localStorage.getItem('jp-theme') || 'light';
+        var lang = (localStorage.getItem('jp-lang') || 'mn').toUpperCase();
+        function set(id, v) { var el = document.getElementById(id); if (el) el.textContent = v; }
+        set('progFavCount', favs.length);
+        set('progFavCount2', favs.length);
+        set('progQuizBest', best);
+        set('progQuizBest2', best);
+        set('progQuizAttempts', attempts);
+        set('progQuizLast', last === null ? '-' : last);
+        set('progLang', lang);
+        set('progTheme', theme === 'dark' ? t('theme_dark') : t('theme_light'));
+        var bar = document.getElementById('progQuizBestBar');
+        if (bar) bar.style.width = Math.min(best * 10, 100) + '%';
+    }
+    document.addEventListener('languageChanged', render);
+    render();
+})();
+    </script>
+</body>
+</html>

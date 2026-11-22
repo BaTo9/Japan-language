@@ -3864,3 +3864,203 @@ LEVEL SECTION - ТӨВЛӨРСӨН
         font-size: 1.2rem;
     }
 }
+/* ===========================
+   НЭМЭЛТ: ДООД НАВИГАЦ (Desktop)
+   Утас дээрх хувилбарыг mobile.css-с харна уу
+   =========================== */
+@media (min-width: 769px) {
+    body {
+        padding-bottom: 92px;
+    }
+    .bottom-nav {
+        position: fixed;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 16px;
+        z-index: 900;
+        display: flex;
+        gap: 4px;
+        background: var(--bg-navbar);
+        border: 1px solid var(--border-color);
+        border-radius: 50px;
+        box-shadow: var(--shadow);
+        padding: 6px 10px;
+    }
+    .bottom-nav-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2px;
+        padding: 8px 18px;
+        border-radius: 40px;
+        color: var(--text-secondary);
+        font-size: 0.7rem;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.25s ease;
+    }
+    .bottom-nav-item i {
+        font-size: 1.15rem;
+    }
+    .bottom-nav-item:hover {
+        background: var(--link-hover-bg);
+        color: var(--text-primary);
+    }
+    .bottom-nav-item.active {
+        color: var(--accent);
+        background: var(--link-hover-bg);
+    }
+}
+
+/* ===========================
+   НЭМЭЛТ: ҮГСИЙН САН — хайлт, дуртай товч
+   =========================== */
+.vocab-search {
+    margin-bottom: 1.5rem;
+}
+.vocab-search input {
+    width: 100%;
+    padding: 14px 18px;
+    border-radius: 50px;
+    border: 1px solid var(--border-color);
+    background: var(--bg-navbar);
+    color: var(--text-primary);
+    font-size: 1rem;
+    box-shadow: var(--shadow);
+    outline: none;
+}
+.vocab-search input:focus {
+    border-color: var(--accent);
+}
+.vocab-table .vocab-row {
+    grid-template-columns: 1.1fr 1fr 0.9fr 1.2fr 40px;
+    align-items: center;
+}
+.vocab-fav-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    padding: 6px;
+    border-radius: 8px;
+    transition: all 0.2s;
+}
+.vocab-fav-btn:hover {
+    transform: scale(1.15);
+}
+.vocab-fav-btn.active {
+    color: #ef4444;
+}
+
+/* ===========================
+   НЭМЭЛТ: QUIZ — буруу хариулт, санал хүсэлт
+   =========================== */
+.options-grid .option-btn.wrong {
+    border-color: #ef4444;
+    background: #ef444420;
+}
+.quiz-feedback {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 700;
+    min-height: 1.6rem;
+    margin-top: 1rem;
+    color: var(--text-primary);
+}
+
+/* ===========================
+   НЭМЭЛТ: СОНСГОЛ — далд орчуулга
+   =========================== */
+.listening-translation {
+    display: none;
+    margin-top: 0.4rem;
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    font-weight: 600;
+}
+.listening-translation.show {
+    display: block;
+}
+.listening-reveal-btn {
+    background: none;
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    padding: 6px 14px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-top: 0.4rem;
+    transition: all 0.2s;
+}
+.listening-reveal-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+/* ===========================
+   НЭМЭЛТ: НЭВТРЭХ / БҮРТГҮҮЛЭХ форм
+   =========================== */
+.auth-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+@media (max-width: 700px) {
+    .auth-grid { grid-template-columns: 1fr; }
+}
+.auth-card {
+    background: var(--bg-navbar);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 1.8rem;
+    box-shadow: var(--shadow);
+}
+.auth-card h3 {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: 1.2rem;
+    text-align: center;
+}
+.auth-card label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin: 0.9rem 0 0.35rem;
+}
+.auth-card input {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    background: var(--bg-body);
+    color: var(--text-primary);
+    font-size: 1rem;
+    outline: none;
+}
+.auth-card input:focus {
+    border-color: var(--accent);
+}
+.auth-card .submit-quiz {
+    width: 100%;
+}
+.auth-msg {
+    min-height: 1.4rem;
+    font-size: 0.92rem;
+    font-weight: 600;
+    margin-top: 0.9rem;
+    text-align: center;
+}
+.auth-msg.error { color: #ef4444; }
+.auth-msg.success { color: #22c55e; }
+.auth-user-info {
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    margin-bottom: 1.2rem;
+}

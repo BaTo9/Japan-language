@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="mn" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Япон хэл сурах апп</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../mobile.css" media="screen and (max-width: 768px)">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=keyboard_double_arrow_down" />
+</head>
+<body>
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar">
+        <div class="nav-logo">
+            <i class="#fas fa-language"></i>  <!-- ✅ #-г устгасан -->
+            <span>JP<span class="logo-highlight">IndraniL</span></span>
+        </div>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Меню нээх">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+
+    <!-- ===== МЕНЮ ===== -->
+    <div class="menu-overlay" id="menuOverlay">
+        <div class="menu-container">
+            <button class="menu-close-btn" id="menuCloseBtn" aria-label="Меню хаах">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="menu-controls">
+                <div class="control-group">
+                    <span class="control-label"></span>
+                    <button class="theme-toggle" id="themeToggle">
+                        <i class="fas fa-moon"></i>
+                        <span id="themeText"></span>
+                    </button>
+                </div>
+                <div class="control-group">
+                    <span class="control-label"><i class="fas fa-globe"></i> </span>
+                    <div class="lang-dropdown" id="langDropdown">
+                        <button class="lang-dropdown-toggle" id="langToggle">
+                            <span id="currentLangLabel">MN</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="lang-dropdown-menu" id="langMenu">
+                            <button class="lang-option active" data-lang="mn">
+                                <span class="lang-option-code">MN</span>
+                                <span class="lang-option-name">Монгол</span>
+                            </button>
+                            <button class="lang-option" data-lang="en">
+                                <span class="lang-option-code">EN</span>
+                                <span class="lang-option-name">English</span>
+                            </button>
+                            <button class="lang-option" data-lang="jp">
+                                <span class="lang-option-code">JP</span>
+                                <span class="lang-option-name">日本語</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-links">
+                <a href="../index.html" class="menu-link" data-i18n="menu_home"><i class="fas fa-home"></i> Нүүр</a>
+                <a href="hiragana.html" class="menu-link" data-i18n="menu_hiragana"><i class="fas fa-font"></i> Хирагана</a>
+                <a href="katakana.html" class="menu-link" data-i18n="menu_katakana"><i class="fas fa-font"></i> Катакана</a>
+                <a href="kanji.html" class="menu-link" data-i18n="menu_kanji"><i class="fas fa-icons"></i> Ханз</a>  <!-- ✅ Ханз → Канжи -->
+                <a href="grammar.html" class="menu-link" data-i18n="menu_grammar"><i class="fas fa-book-open"></i> Дүрэм</a>
+                <a href="vocabulary.html" class="menu-link active" data-i18n="menu_vocabulary"><i class="fas fa-list-ul"></i> Үгсийн сан</a>
+                <a href="listening.html" class="menu-link" data-i18n="menu_listening"><i class="fas fa-headphones"></i> Сонсгол</a>
+                <a href="quiz.html" class="menu-link" data-i18n="menu_quiz"><i class="fas fa-question-circle"></i> Шалгалт</a>
+                <a href="pdf.html" class="menu-link" data-i18n="menu_pdf"><i class="fas fa-file-pdf"></i> PDF</a>
+                <a href="favorites.html" class="menu-link" data-i18n="menu_favorites"><i class="fas fa-heart"></i> Дуртай</a>
+                <a href="progress.html" class="menu-link" data-i18n="menu_progress"><i class="fas fa-chart-line"></i> Ахиц</a>
+                <a href="settings.html" class="menu-link" data-i18n="menu_settings"><i class="fas fa-cog"></i> Тохиргоо</a>
+<a href="login.html" class="menu-link" id="menuLoginLink" data-i18n="menu_login"><i class="fas fa-user"></i> Нэвтрэх</a>
+            </div>
+        </div>
+    </div>
+
+        <!-- ===== ҮНДСЭН АГУУЛГА ===== -->
+    <main class="page-content">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h1 data-i18n="vocabulary_title">📝 Үгсийн сан</h1>
+                <p data-i18n="vocabulary_subtitle">Түвшингээр эрэмбэлсэн үгсийн сан</p>
+            </div>
+
+            <div class="vocab-search fade-in">
+                <input type="text" id="vocabSearch" placeholder="Үг хайх..." autocomplete="off">
+            </div>
+
+            <div class="vocab-level fade-in">
+                <div class="vocab-level-header">
+                    <h3 class="vocab-level-title" data-i18n="vocab_level_n5">📘 N5 түвшин</h3>
+                    <span class="vocab-level-count" id="vocabCount"></span>
+                    <button class="vocab-toggle-btn"><i class="fas fa-chevron-up"></i></button>
+                </div>
+                <div class="vocab-level-body open">
+                    <div class="vocab-table" id="vocabTable"></div>
+                    <div class="vocab-empty" id="vocabEmpty" style="display:none;" data-i18n="vocab_no_results">Хайлтад тохирох үг олдсонгүй</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ===== GO TO TOP ТОВЧ ===== -->
+<button class="go-top-btn" id="goTopBtn" aria-label="Дээд хэсэг рүү очих">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+    <!-- ===== ХӨЛ ===== -->
+    <footer class="footer">
+        <div class="container">
+            <p data-i18n="footer_text">© 2026 JP Learn. Япон хэл сурах апп.</p>
+            <div class="footer-links">
+                <a href="settings.html" data-i18n="footer_settings">Тохиргоо</a>
+                <a href="progress.html" data-i18n="footer_progress">Ахиц</a>
+                <a href="favorites.html" data-i18n="footer_favorites">Дуртай</a>
+            </div>
+        </div>
+    </footer>
+    <!-- ===== ДООД НАВИГАЦ (утасны апп) ===== -->
+    <nav class="bottom-nav" aria-label="Bottom navigation">
+        <a href="../index.html" class="bottom-nav-item"><i class="fas fa-home"></i><span data-i18n="menu_home">Нүүр</span></a>
+        <a href="kanji.html" class="bottom-nav-item"><i class="fas fa-icons"></i><span data-i18n="menu_kanji">Ханз</span></a>
+        <a href="favorites.html" class="bottom-nav-item"><i class="fas fa-heart"></i><span data-i18n="menu_favorites">Дуртай</span></a>
+        <a href="progress.html" class="bottom-nav-item"><i class="fas fa-chart-line"></i><span data-i18n="menu_progress">Ахиц</span></a>
+        <a href="settings.html" class="bottom-nav-item"><i class="fas fa-cog"></i><span data-i18n="menu_settings">Тохиргоо</span></a>
+    </nav>
+    <script src="../script.js"></script>
+    <script src="../vocabulary-data.js"></script>
+    <script>
+function t(key) {
+    try {
+        var lang = localStorage.getItem('jp-lang') || 'mn';
+        return (translations[lang] && translations[lang][key]) || key;
+    } catch (e) { return key; }
+}
+(function() {
+    var table = document.getElementById('vocabTable');
+    var empty = document.getElementById('vocabEmpty');
+    var count = document.getElementById('vocabCount');
+    var search = document.getElementById('vocabSearch');
+    if (!table || typeof vocabularyData === 'undefined') return;
+
+    function getFavs() {
+        try { return JSON.parse(localStorage.getItem('jp_favorites') || '[]'); } catch (e) { return []; }
+    }
+    function setFavs(f) { localStorage.setItem('jp_favorites', JSON.stringify(f)); }
+
+    function render() {
+        var q = (search.value || '').toLowerCase();
+        var favs = getFavs();
+        var html = '<div class="vocab-row header"><span data-i18n="vocab_table_japanese">' + t('vocab_table_japanese') + '</span><span>' + t('vocab_table_reading') + '</span><span>' + t('vocab_table_romaji') + '</span><span>' + t('vocab_table_meaning') + '</span><span></span></div>';
+        var shown = 0;
+        vocabularyData.forEach(function(w) {
+            var hay = (w.jp + ' ' + w.reading + ' ' + w.romaji + ' ' + w.mn).toLowerCase();
+            if (q && hay.indexOf(q) === -1) return;
+            shown++;
+            var isFav = favs.indexOf(w.jp) !== -1;
+            html += '<div class="vocab-row">'
+                + '<span class="jp">' + w.jp + '</span>'
+                + '<span>' + w.reading + '</span>'
+                + '<span>' + w.romaji + '</span>'
+                + '<span>' + w.mn + '</span>'
+                + '<button class="vocab-fav-btn' + (isFav ? ' active' : '') + '" data-word="' + w.jp + '" aria-label="favorite"><i class="fas fa-heart"></i></button>'
+                + '</div>';
+        });
+        table.innerHTML = html;
+        empty.style.display = shown ? 'none' : 'block';
+        count.textContent = shown + ' / ' + vocabularyData.length;
+        if (typeof setLanguage === 'function') {
+            // header labels are re-applied by script.js on languageChanged; nothing extra needed here
+        }
+    }
+
+    table.addEventListener('click', function(e) {
+        var btn = e.target.closest('.vocab-fav-btn');
+        if (!btn) return;
+        var word = btn.dataset.word;
+        var favs = getFavs();
+        var idx = favs.indexOf(word);
+        if (idx === -1) favs.push(word); else favs.splice(idx, 1);
+        setFavs(favs);
+        render();
+    });
+    search.addEventListener('input', render);
+    search.placeholder = t('vocab_search_placeholder');
+    document.addEventListener('languageChanged', function() {
+        search.placeholder = t('vocab_search_placeholder');
+        render();
+    });
+    render();
+})();
+    </script>
+</body>
+</html>
