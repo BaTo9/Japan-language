@@ -1082,7 +1082,7 @@ a{
 /* ===== SCROLL INDICATOR (Hero доорх сум) ===== */
 .scroll-indicator {
     position: absolute;
-    bottom: 30px;
+    bottom: 96px;
     left: 50%;
     transform: translateX(-50%);
     color: white;
@@ -2293,7 +2293,7 @@ hiragana KANA GRID 5 БАГАНА ===== */
 /* ===== SCROLL INDICATOR (Товч болгон) ===== */
 .scroll-indicator {
     position: absolute;
-    bottom: 30px;
+    bottom: 96px;
     left: 50%;
     transform: translateX(-50%);
     color: white;
