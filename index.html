@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="mn" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Япон хэл сурах апп</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../mobile.css" media="screen and (max-width: 768px)">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=keyboard_double_arrow_down" />
+</head>
+<body>
+    <!-- ============ 
+    NAVBAR 
+    ============== -->
+    <nav class="navbar">
+        <div class="nav-logo">
+    <i class="#fas fa-language"></i> 
+            <span>JP<span class="logo-highlight">IndraniL</span></span>
+        </div>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Меню нээх">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+
+    <!-- ============= 
+           МЕНЮ 
+    ============== -->
+    <div class="menu-overlay" id="menuOverlay">
+<div class="menu-container">
+<button class="menu-close-btn" id="menuCloseBtn" aria-label="Меню хаах">
+                <i class="fas fa-times"></i>
+</button>
+<div class="menu-controls">
+                <div class="control-group">
+              <!--      <span class="control-label"><i class="fas fa-palette"></i> Сэдэв</span>-->
+                    <button class="theme-toggle" id="themeToggle">
+                        <i class="fas fa-moon"></i>
+                        <span id="themeText"></span>
+                    </button>
+               </div>
+                <div class="control-group">
+                    <span class="control-label"><i class="fas fa-globe"></i> </span>
+                    <div class="lang-dropdown" id="langDropdown">
+                        <button class="lang-dropdown-toggle" id="langToggle">
+                            <span id="currentLangLabel">MN</span>
+                            <i class="fas fa-chevron-down"></i>
+         </button>
+   
+   <!-- хэл солих хэсэг -->
+        <div class="lang-dropdown-menu" id="langMenu">
+            <button class="lang-option active" data-lang="mn">
+         <span class="lang-option-code">MN</span>
+                                <span class="lang-option-name">Монгол</span>
+                            </button>
+                            <button class="lang-option" data-lang="en">
+                                <span class="lang-option-code">EN</span>
+                                <span class="lang-option-name">English</span>
+                            </button>
+                            <button class="lang-option" data-lang="jp">
+                                <span class="lang-option-code">JP</span>
+                                <span class="lang-option-name">日本語</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+    <!-- ===============
+       Хажуугийн меню 
+    ================ -->
+<div class="menu-links">
+<a href="../index.html" class="menu-link active" data-i18n="menu_home"><i class="fas fa-home"></i> Нүүр</a>
+<a href="pages/hiragana.html" class="menu-link" data-i18n="menu_hiragana"><i class="fas fa-font"></i> Хирагана</a>
+<a href="pages/katakana.html" class="menu-link" data-i18n="menu_katakana"><i class="fas fa-font"></i> Катакана</a>
+ <a href="pages/kanji.html" class="menu-link" data-i18n="menu_kanji"><i class="fas fa-icons"></i> Ханз</a> 
+<a href="pages/grammar.html" class="menu-link" data-i18n="menu_grammar"><i class="fas fa-book-open"></i> Дүрэм</a>
+<a href="pages/vocabulary.html" class="menu-link" data-i18n="menu_vocabulary"><i class="fas fa-list-ul"></i> Үгсийн сан</a>
+<a href="pages/listening.html" class="menu-link" data-i18n="menu_listening"><i class="fas fa-headphones"></i> Сонсгол</a>
+<a href="pages/quiz.html" class="menu-link" data-i18n="menu_quiz"><i class="fas fa-question-circle"></i> Шалгалт</a>
+<a href="pages/pdf.html" class="menu-link" data-i18n="menu_pdf"><i class="fas fa-file-pdf"></i> PDF</a>
+<a href="pages/favorites.html" class="menu-link" data-i18n="menu_favorites"><i class="fas fa-heart"></i> Дуртай</a>
+<a href="pages/progress.html" class="menu-link" data-i18n="menu_progress"><i class="fas fa-chart-line"></i> Ахиц</a>
+<a href="pages/settings.html" class="menu-link" data-i18n="menu_settings"><i class="fas fa-cog"></i> Тохиргоо</a>
+          </div>
+     </div>
+</div>
+
+    <!-- ============= 
+    HERO ХЭСЭГ showcase
+    =============== -->
+    <section class="hero" style="background-image: url('img/fon-01.jpg');">
+        <div class="hero-content">
+            <h1 data-i18n="hero_title">Япон хэлний ертөнцөд тавтай морил</h1>
+            <p data-i18n="hero_desc">Өдөр бүр 10 минут, тогтмол дасгал хийж Япон хэлээ сайжруулаарай.</p>
+            <a href="pages/hiragana.html" class="btn-primary" data-i18n="hero_btn">Эхлэх</a>
+        </div>
+        
+     
+<button class="scroll-indicator" id="scrollIndicator" onclick="scrollToShowcase()" aria-label="Товчлуур дээр дар">
+    <span data-i18n="scroll_down">Товчлуур дээр дар</span>
+    <i class="fas fa-angle-double-down"></i>
+</button>
+    </section>
+
+    <!-- ============== 
+      Эх бие ХЭСЭГ 
+    ================ -->
+    <section class="showcase" id="showcase">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 data-i18n="showcase_title">📚 Япон хэл сурах бүх шат</h2>
+                <p data-i18n="showcase_desc">Үндсэнээс эхлээд дэвшилтэт түвшин хүртэл</p>
+            </div>
+            <div class="showcase-grid-5">
+               
+ <!-- 1. Хирагана -->
+                <div class="showcase-card fade-in">
+                    <div class="showcase-icon">ひ</div>
+                    <h3 data-i18n="card_hiragana">Хирагана</h3>
+                    <p data-i18n="card_hiragana_desc">46 үндсэн үсэг</p>
+                    <span class="showcase-level" data-i18n="card_hiragana_level">Эхлэгч</span>
+                    <a href="pages/hiragana.html" class="showcase-link" data-i18n="card_hiragana_link">Судлах →</a>
+                </div>
+     <!-- 2. Катакана -->
+                <div class="showcase-card fade-in">
+                    <div class="showcase-icon">カ</div>
+                    <h3 data-i18n="card_katakana">Катакана</h3>
+                    <p data-i18n="card_katakana_desc">46 үндсэн үсэг</p>
+                    <span class="showcase-level" data-i18n="card_katakana_level">Эхлэгч</span>
+                    <a href="pages/katakana.html" class="showcase-link" data-i18n="card_katakana_link">Судлах →</a>
+                </div>
+      <!-- 3. Канжи -->
+                <div class="showcase-card fade-in">
+                    <div class="showcase-icon">日</div>
+                    <h3 data-i18n="card_kanji">Канжи</h3>
+                    <p data-i18n="card_kanji_desc">50+ тэмдэгт</p>
+                    <span class="showcase-level" data-i18n="card_kanji_level">Дунд</span>
+                    <a href="pages/kanji.html" class="showcase-link" data-i18n="card_kanji_link">Судлах →</a>
+                </div>
+      <!-- 4. Дүрэм -->
+                <div class="showcase-card fade-in">
+                    <div class="showcase-icon">📖</div>
+                    <h3 data-i18n="card_grammar">Дүрэм</h3>
+                    <p data-i18n="card_grammar_desc">30+ дүрэм</p>
+                    <span class="showcase-level" data-i18n="card_grammar_level">Бүх түвшин</span>
+                    <a href="pages/grammar.html" class="showcase-link" data-i18n="card_grammar_link">Судлах →</a>
+                </div>
+                
+    <!-- 5. Үгсийн сан -->
+                <div class="showcase-card fade-in">
+                    <div class="showcase-icon">📝</div>
+                    <h3 data-i18n="card_vocabulary">Үгсийн сан</h3>
+                    <p data-i18n="card_vocabulary_desc">100+ үг</p>
+                    <span class="showcase-level" data-i18n="card_vocabulary_level">Эхлэгч</span>
+                    <a href="pages/vocabulary.html" class="showcase-link" data-i18n="card_vocabulary_link">Судлах →</a>
+                </div>
+     <!-- 6. Сонсгол -->
+                <div class="showcase-card fade-in">
+                    <div class="showcase-icon">🎧</div>
+                    <h3 data-i18n="card_listening">Сонсгол</h3>
+                    <p data-i18n="card_listening_desc">Аудио дасгал</p>
+                    <span class="showcase-level" data-i18n="card_listening_level">Дунд</span>
+                    <a href="pages/listening.html" class="showcase-link" data-i18n="card_listening_link">Судлах →</a>
+                </div>
+     <!-- 7. Шалгалт -->
+                <div class="showcase-card fade-in">
+                    <div class="showcase-icon">❓</div>
+                    <h3 data-i18n="card_quiz">Шалгалт</h3>
+                    <p data-i18n="card_quiz_desc">Мэдлэг шалгах</p>
+                    <span class="showcase-level" data-i18n="card_quiz_level">Бүх түвшин</span>
+                    <a href="pages/quiz.html" class="showcase-link" data-i18n="card_quiz_link">Судлах →</a>
+                </div>
+        <!-- 8. PDF -->
+                <div class="showcase-card fade-in">
+                    <div class="showcase-icon">📄</div>
+                    <h3 data-i18n="card_pdf">PDF татах</h3>
+                    <p data-i18n="card_pdf_desc">Материал татах</p>
+                    <span class="showcase-level" data-i18n="card_pdf_level">Бүх түвшин</span>
+                    <a href="pages/pdf.html" class="showcase-link" data-i18n="card_pdf_link">Судлах →</a>
+                </div>
+     <!-- 9. Дуртай -->
+                <div class="showcase-card fade-in">
+                    <div class="showcase-icon">❤️</div>
+                    <h3 data-i18n="card_favorites">Дуртай зүйлс</h3>
+                    <p data-i18n="card_favorites_desc">Хадгалах систем</p>
+                    <span class="showcase-level" data-i18n="card_favorites_level">Бүх түвшин</span>
+                    <a href="pages/favorites.html" class="showcase-link" data-i18n="card_favorites_link">Судлах →</a>
+                </div>
+       <!-- 10. Ахиц -->
+                <div class="showcase-card fade-in">
+                    <div class="showcase-icon">📊</div>
+                    <h3 data-i18n="card_progress">Ахиц</h3>
+                    <p data-i18n="card_progress_desc">Статистик хянах</p>
+                    <span class="showcase-level" data-i18n="card_progress_level">Бүх түвшин</span>
+                    <a href="pages/progress.html" class="showcase-link" data-i18n="card_progress_link">Судлах →</a>
+                </div>
+                <div class="showcase-card fade-in">
+                    <div class="showcase-icon">⚙️</div>
+                    <h3 data-i18n="card_settings">Тохиргоо</h3>
+                    <p data-i18n="card_settings_desc">Аппын тохиргоо</p>
+                    <span class="showcase-level" data-i18n="card_settings_level">Бүх түвшин</span>
+                    <a href="pages/settings.html" class="showcase-link" data-i18n="card_settings_link">Судлах →</a>
+                </div>
+     <!-- 12. Хичээл -->
+                <div class="showcase-card fade-in">
+                    <div class="showcase-icon">🎯</div>
+                    <h3 data-i18n="card_lessons">Хичээлүүд</h3>
+                    <p data-i18n="card_lessons_desc">Өдрийн хичээл</p>
+                    <span class="showcase-level" data-i18n="card_lessons_level">Бүх түвшин</span>
+                    <a href="pages/hiragana.html" class="showcase-link" data-i18n="card_lessons_link">Судлах →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== СТАТИСТИК ХЭСЭГ ===== -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid-home">
+                <div class="stat-item fade-in">
+                    <div class="stat-number" data-count="46">0</div>
+                    <div class="stat-label" data-i18n="stats_hiragana">Хирагана</div>
+                </div>
+                <div class="stat-item fade-in">
+                    <div class="stat-number" data-count="46">0</div>
+                    <div class="stat-label" data-i18n="stats_katakana">Катакана</div>
+                </div>
+                <div class="stat-item fade-in">
+                    <div class="stat-number" data-count="50">0</div>
+                    <div class="stat-label" data-i18n="stats_kanji">Канжи</div>
+                </div>
+                <div class="stat-item fade-in">
+                    <div class="stat-number" data-count="100">0</div>
+                    <div class="stat-label" data-i18n="stats_vocabulary">Үгсийн сан</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= 
+       FEATURES ХЭСЭГ 
+    ================== -->
+    <section class="steps-section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 data-i18n="features_title">🌟 Яагаад биднийг сонгох вэ?</h2>
+                <p data-i18n="features_desc">Таныг амжилттай сурахад туслах онцлогууд</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card fade-in">
+                    <i class="fas fa-clock"></i>
+                    <h4 data-i18n="feature_1_title">Өдөрт 10 минут</h4>
+                    <p data-i18n="feature_1_desc">Богино хугацаанд тогтмол дасгал хийх</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h4 data-i18n="feature_2_title">Ямар ч төхөөрөмж</h4>
+                    <p data-i18n="feature_2_desc">Компьютер, таблет, ухаалаг гар утас</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <i class="fas fa-chart-line"></i>
+                    <h4 data-i18n="feature_3_title">Ахицыг хянах</h4>
+                    <p data-i18n="feature_3_desc">Өөрийн дэвшлийг бүрэн хянах</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <i class="fas fa-heart"></i>
+                    <h4 data-i18n="feature_4_title">Дуртай зүйлс</h4>
+                    <p data-i18n="feature_4_desc">Хамгийн чухал материалнуудаа хадгалах</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- =================== 
+       GO TO TOP ТОВЧ 
+ (Дээш хөдөлгөхөд гарч ирнэ) ================ -->
+<button class="go-top-btn" id="goTopBtn" aria-label="Дээд хэсэг рүү очих">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+    <!-- ============ 
+        ХӨЛ <footer>
+        ============== -->
+    <footer class="footer">
+        <div class="container">
+            <p data-i18n="footer_text">© 2026 JP Learn. Япон хэл сурах апп.</p>
+            <div class="footer-links">
+                <a href="pages/settings.html" data-i18n="footer_settings">Тохиргоо</a>
+                <a href="pages/progress.html" data-i18n="footer_progress">Ахиц</a>
+                <a href="pages/favorites.html" data-i18n="footer_favorites">Дуртай</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
